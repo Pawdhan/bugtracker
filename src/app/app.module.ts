@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { BugService } from './BugService';
 import { HttpClientModule } from '@angular/common/http';
+import { BaseComponentComponent } from './base-component/base-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BaseComponentComponent
   ],
   imports: [
     BrowserModule,
