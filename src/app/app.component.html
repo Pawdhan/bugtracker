@@ -15,3 +15,20 @@ Severity:
 <input type="radio" name="severity" value="REGULAR" [(ngModel)]='bug.severity'>Regular
 <br/>
 <button (click)='create()'>Create</button>
+<button (click)='sort()'>Sort</button>
+<br/>
+<input placeholder="Search by status" [(ngModel)]="filter">
+<button (click)='filterByStatus()'>Search</button>
+
+<h4>Bugs</h4>
+<ol>
+  <li *ngFor="let b of bugs;index as i;">
+    <span>{{b.name}}</span>,
+    <span>{{b.status}}</span>,  
+    <span>{{b.submissinDate}}</span>, 
+    <span>{{b.severity}}</span>
+  </li>
+</ol>
+
+
+

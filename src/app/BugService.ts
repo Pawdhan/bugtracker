@@ -5,9 +5,13 @@ const BASE_URL = "http://localhost:3000/bugs";
 @Injectable()//Bean
 export  class BugService { //public = export
     constructor(private http: HttpClient) { }
-    // getUsers() {
-    //     return this.http.get(BASE_URL);
-    // }
+    getBugs() {
+        return this.http.get(BASE_URL);
+    }
+
+    getByStatus(status:string) {
+        return this.http.get(BASE_URL + '?status=' +  status);
+    }
 
     save(bug: Bug) {
         console.log(bug);

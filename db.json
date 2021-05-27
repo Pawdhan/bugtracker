@@ -6,6 +6,20 @@
       "status": "Saved",
       "severity": "REGULAR",
       "id": 1
+    },
+    {
+      "name": "bug2",
+      "submissinDate": "2021-05-28",
+      "status": "Submitted",
+      "severity": "URGENT",
+      "id": 2
+    },
+    {
+      "name": "bug3",
+      "submissinDate": "2021-05-28",
+      "status": "Saved",
+      "severity": "REGULAR",
+      "id": 3
     }
   ]
 }
