@@ -1,0 +1,11 @@
+{
+  "bugs": [
+    {
+      "name": "bug1",
+      "submissinDate": "2021-05-27",
+      "status": "Saved",
+      "severity": "REGULAR",
+      "id": 1
+    }
+  ]
+}

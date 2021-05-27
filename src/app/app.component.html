@@ -1,0 +1,17 @@
+<h3>Create Bug</h3>
+
+<br/>
+
+Enter bug name: <input [(ngModel)]="bug.name">
+<br/>
+Submission Date: <input type="date" [(ngModel)]='bug.submissinDate'>
+<br/>
+Status: 
+<input type="radio" name="status" value="Saved" [(ngModel)]='bug.status'>Saved
+<input type="radio" name="status" value="Submitted" [(ngModel)]='bug.status'>Submitted
+<br/>
+Severity: 
+<input type="radio" name="severity" value="URGENT" [(ngModel)]='bug.severity'>Urgent
+<input type="radio" name="severity" value="REGULAR" [(ngModel)]='bug.severity'>Regular
+<br/>
+<button (click)='create()'>Create</button>
