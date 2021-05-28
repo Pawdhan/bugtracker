@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { BugService } from './BugService';
-import Bug from './entity/Bug';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- 
+  selectedRole: string = "";
+  onSelect(value: string) {
+    console.log('val: '+value);
+    this.selectedRole = value;
+  }
 }

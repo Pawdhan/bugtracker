@@ -1,7 +1,37 @@
-<header>
-  <nav>
-    <a routerLink="/" >Home</a>
-      <a routerLink="/createbug">Create Bug</a>
-  </nav>
-</header>
+
+<div *ngIf="selectedRole==''">
+  <button (click)='onSelect("ADMIN")'>Admin</button>
+&nbsp;
+<button (click)='onSelect("USER")'>User</button>
+</div>
+<div *ngIf="selectedRole=='ADMIN'">
+
+  <header>
+    <nav>
+      &nbsp;&nbsp;
+        <a routerLink="/manageschedules">Manage Schedules</a>
+        &nbsp;&nbsp;
+        <a routerLink="/manageairlines">Manage Airlines</a>
+        &nbsp;&nbsp;
+        <button (click)='onSelect("")'> <a routerLink="/">Log out</a></button>
+    </nav>
+  </header>
+    
+</div>
+
+<div *ngIf="selectedRole=='USER'">
+  <header>
+    <nav>
+        <a routerLink="/bookflight">Book Flight</a>
+        &nbsp;&nbsp;
+        <a routerLink="/managebookings">Manage Bookings</a>
+        &nbsp;&nbsp;
+        <a routerLink="/bookinghistory">Booking History</a>
+        &nbsp;&nbsp;
+        <button (click)='onSelect("")'> <a routerLink="/">Log out</a></button>
+    </nav>
+  </header>
+  
+</div>
+
 <router-outlet></router-outlet>
