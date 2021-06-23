@@ -1,0 +1,13 @@
+
+docker run --name zookeeper -p 2181:2181 zookeeper
+
+docker run -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=172.17.0.1:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://172.17.0.1:9092 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 -e KAFKA_BROKER_ID=2 -e KAFKA_AUTO_CREATE_TOPICS_ENABLE=true confluentinc/cp-kafka
+
+
+
+
+// create topic
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --topic kafka_topic_name
+
+// start console for the incoming messages
+kafka-console-consumer.sh --bootstrap-server localhost:kafkaPort --topic kafka_topic_name --from-beginning
